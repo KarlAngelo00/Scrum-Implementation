@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Task Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-section="list">Tasks</a></li>
+                <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <table>
+                <tr>
+                    <td>
+                        <form autocomplete="off" onsubmit="onFormSubmit()">
+                            <div>
+                                <label for="tittle">Tittle</label>
+                                <input type="text" name="tittle" id="tittle">
+                            </div>
+                            <div>
+                                <label for="description">Description</label>
+                                <input type="text" name="description" id="description">
+                            </div>
+                            <div>
+                                <label for="dueDate">Due date</label>
+                                <input type="date" name="dueDate" id="dueDate">
+                            </div>
+        
+                            <div class="form_action--button">
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Reset">
+                            </div>
+                        </form>
+                </table>
+                
+        
+        </section>
+
+        <section id="list" class="section">
+        
+            
+                        <td>
+                            <table class="list" id="taskList">
+                                <thead>
+                                    <tr>
+                                        <th>TITTLE</th>
+                                        <th>DESCRIPTION</th>
+                                        <th>DUE DATE</th>
+                                        <th>OPTIONS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                </tbody>
+                            </table>
+                        </td>
+            
+        </section>
+
+        <section id="contact" class="section">
+            <h1>Contact us</h1>
+            <h2>If you have concerns or feedbacks just leave a message below.</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+    
+                <button type="submit" onclick="submitForm(event)">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="function.js"></script>
+</body>
+</html>
